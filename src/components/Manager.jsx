@@ -25,7 +25,7 @@ const Manager = () => {
     const copyFunction = (item) => {
         toast('Copied to clipboard', {
             position: "bottom-left",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: true,
@@ -60,7 +60,7 @@ const Manager = () => {
     const savePassword = () => {
         toast('Password saved !!', {
             position: "bottom-left",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: true,
