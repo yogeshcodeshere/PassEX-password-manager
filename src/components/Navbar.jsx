@@ -30,7 +30,10 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                <button className="flex gap-2 justify-center items-center rounded-lg bg-violet-600 px-3 py-1.5 text-white transition hover:bg-violet-500">
+                <button onClick={() => {
+                  window.open("https://github.com/yogeshcodeshere/PassEX-password-manager", "_blank")
+                }
+                } className="cursor-pointer flex gap-2 justify-center items-center rounded-lg bg-violet-600 px-3 py-1.5 text-white transition hover:bg-violet-500">
                     <img src="icons/github.svg" alt="" width={20} />
                     Github
                 </button>
