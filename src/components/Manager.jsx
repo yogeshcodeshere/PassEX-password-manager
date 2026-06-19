@@ -58,6 +58,7 @@ const Manager = () => {
     }
 
     const savePassword = () => {
+        if(form.site.length > 3 && form.username.length > 3 && form.password.length > 3){
         toast('Password saved !!', {
             position: "bottom-left",
             autoClose: 2000,
@@ -68,14 +69,19 @@ const Manager = () => {
             progress: undefined,
             theme: "dark",
         });
-        setPasswordArr([...passwordArr, { ...form, id: uuidv4() }])
-        localStorage.setItem("passwords", JSON.stringify([...passwordArr, { ...form, id: uuidv4() }]))
-        setform({
-            site: "",
-            username: "",
-            password: ""
-        })
 
+            setPasswordArr([...passwordArr, { ...form, id: uuidv4() }])
+            localStorage.setItem("passwords", JSON.stringify([...passwordArr, { ...form, id: uuidv4() }]))
+            setform({
+                site: "",
+                username: "",
+                password: ""
+            })
+        }
+        else{
+            alert("length too short")
+        }
+            
     }
 
     const handleDelete = (id) => {
