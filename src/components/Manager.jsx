@@ -79,12 +79,14 @@ const Manager = () => {
     }
 
     const handleDelete = (id) => {
-        console.log("delete item with id: ", id)
-        let newpass = passwordArr.filter(item => {
-            return item.id != id
-        })
-        setPasswordArr(newpass)
-        localStorage.setItem("passwords", JSON.stringify(newpass))
+        let c = confirm("do you really want to delete ?")
+        if (c){
+            let newpass = passwordArr.filter(item => {
+                return item.id != id
+            })
+            setPasswordArr(newpass)
+            localStorage.setItem("passwords", JSON.stringify(newpass))
+        }
     }
 
     const handleEdit = (id) => {
@@ -129,7 +131,7 @@ const Manager = () => {
                 pauseOnHover
                 theme="dark"
             />
-            <div className="container h-full w-full items-center px-5 py-24">
+            <div className="container h-full w-full items-center px-5 py-10 md:py-24">
                 <div className="mx-auto max-w-250 bg-[#0403117d] min-h-[85vh] p-4 rounded-lg">
                     <div className="logo text-white flex flex-col items-center justify-centre">
                         <div>
@@ -140,7 +142,7 @@ const Manager = () => {
                     </div>
                     <div className='flex flex-col gap-5 text-white p-4'>
                         <input name='site' onChange={handleChange} value={form.site} placeholder='Website URL' className='border border-[rgba(255,255,255,0.18)] rounded-md py-1.5 px-1.5 focus:outline-none focus:border-[rgb(78,39,177)] transition-colors duration-300' type="text" />
-                        <div className='flex gap-8 justify-between'>
+                        <div className='md:flex-row flex-col flex gap-8 justify-between'>
                             <input name='username' onChange={handleChange} value={form.username} placeholder='Username' className='border border-[rgba(255,255,255,0.18)] focus:border-[rgb(78,39,177)] focus:outline-none transition-colors duration-300 rounded-md  py-1.5 px-1.5 w-full' type="text" />
                             <div className="relative flex items-center">
 
@@ -168,8 +170,9 @@ const Manager = () => {
                         <h2 className='text-xl font-bold px-1 pt-3'>Your passwords</h2>
                         {passwordArr.length === 0 && <div className='flex justify-center items-center pt-10'>No passwords to show</div>}
                         {passwordArr.length !== 0 &&
-                            <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-white/3 backdrop-blur-lg">
-                                <table className="table-auto w-full text-white">
+                        
+                            <div className="mt-6 overflow-x-auto rounded-xl border border-white/10 bg-white/3 backdrop-blur-lg">
+                                <table className="table-auto min-w-150 w-full text-white">
 
                                     <thead>
                                         <tr className="bg-violet-900/20 border-b border-white/10">
