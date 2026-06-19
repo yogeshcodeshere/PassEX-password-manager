@@ -26,14 +26,14 @@ const Footer = () => {
             {/* Links */}
             <div className="flex gap-6 text-sm text-gray-400">
               <a
-                href="#"
+                href="https://onuvets.org/privacy-policy/?gad_source=1&gad_campaignid=23588296200&gbraid=0AAAAACTnmlXwYcyYUK539DVi0S7X9_aRF&gclid=CjwKCAjw0dPRBhAPEiwAE5vTTghjtxriyTudxlmOH5vOeLJI_3iNuZ3NU0pbf2YvczIm1onPPaTEERoCMYAQAvD_BwE"
                 className="transition duration-200 hover:text-indigo-400"
               >
                 Privacy
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/yogeshcodeshere"
                 target="_blank"
                 rel="noreferrer"
                 className="transition duration-200 hover:text-indigo-400"
@@ -42,7 +42,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/yogesh-tanwar-48562730b/"
                 className="transition duration-200 hover:text-indigo-400"
               >
                 Contact

@@ -152,7 +152,7 @@ const Manager = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className="button flex justify-center">
+                        <div className="button flex justify-center md:py-0 py-3">
                             <button onClick={savePassword} className="flex justify-center items-center gap-1 bg-[#2f13eb] text-white px-3 py-2 rounded-2xl cursor-pointer hover:bg-[#412fe89d]">
                                 <lord-icon
                                     src="https://cdn.lordicon.com/gzqofmcx.json"
