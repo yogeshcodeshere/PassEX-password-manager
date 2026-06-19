@@ -131,7 +131,7 @@ const Manager = () => {
                 pauseOnHover
                 theme="dark"
             />
-            <div className="container h-full w-full items-center px-5 py-10 md:py-24">
+            <div className="container h-full w-full items-center px-5 py-15 md:py-24">
                 <div className="mx-auto max-w-250 bg-[#0403117d] min-h-[85vh] p-4 rounded-lg">
                     <div className="logo text-white flex flex-col items-center justify-centre">
                         <div>
